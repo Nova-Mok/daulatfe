@@ -22,9 +22,8 @@ const Footer = () => {
     <div className={Style.footer}>
       <div className={Style.footer_box}>
         <div className={Style.footer_box_social}>
-          {/* <Image src={images.logo} alt="footer logo" height={100} width={100} /> */}
+          { <Image src={images.logo} alt="footer logo" height={100} width={100} />}
           <a href="/">
-            <DiJqueryLogo className={Style.footer_box_social_logo} />
           </a>
           <p>
             The world’s first and largest digital marketplace for crypto

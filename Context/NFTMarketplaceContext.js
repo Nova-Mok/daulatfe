@@ -1,3 +1,6 @@
+//const projectId = "Y2GYNbVcmruaz0gsZlqoY00byNJc";
+//const projectSecretKey = "72ce541c50ff98b2d2a29f702782e151";
+
 import React, { useState, useEffect, useContext } from "react";
 import Wenb3Modal from "web3modal";
 import { ethers } from "ethers";
@@ -5,7 +8,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { create as ipfsHttpClient } from "ipfs-http-client";
 
- // const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
+// const client = ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
 const projectId = "Y2GYNbVcmruaz0gsZlqoY00byNJc";
 const projectSecretKey = "72ce541c50ff98b2d2a29f702782e151";
@@ -13,7 +16,7 @@ const auth = `Basic ${Buffer.from(`${projectId}:${projectSecretKey}`).toString(
   "base64"
 )}`;
 
-const subdomain = "https://egoverse.infura-ipfs.io";
+const subdomain = "https://egovers.infura-ipfs.io";
 
 const client = ipfsHttpClient({
   host: "infura-ipfs.io",
