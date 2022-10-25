@@ -35,10 +35,12 @@ const Home = () => {
   const [nftsCopy, setNftsCopy] = useState([]);
 
   useEffect(() => {
+    if (currentAccount) {
     fetchNFTs().then((items) => {
       setNfts(items.reverse());
       setNftsCopy(items);
     });
+  }
   }, []);
 
   //CREATOR LIST

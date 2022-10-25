@@ -168,6 +168,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   const fetchNFTs = async () => {
     try {
+      if (currentAccount) {
       const provider = new ethers.providers.JsonRpcProvider();
       const contract = fetchContract(provider);
 
@@ -200,8 +201,9 @@ export const NFTMarketplaceProvider = ({ children }) => {
           }
         )
       );
+        }
 
-      // console.log(items);
+        // console.log(items);
       return items;
     } catch (error) {
       setError("Error while fetching NFTS");
@@ -216,6 +218,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
   //--FETCHING MY NFT OR LISTED NFTs
   const fetchMyNFTsOrListedNFTs = async (type) => {
     try {
+      if (currentAccount) {
       const contract = await connectingWithSmartContract();
 
       const data =
@@ -249,6 +252,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
         )
       );
       return items;
+        }
     } catch (error) {
       setError("Error while fetching listed NFTs");
       setOpenError(true);
